@@ -2,11 +2,13 @@
   <div 
   class="square" 
   v-bind:class="{'yellow' : yellow, 'red' : red, 'blue' : blue, 'black' : black}">
-    hello
+    <SectionName class="section" section='About me'/>
   </div>
 </template>
 
 <script>
+import SectionName from './SectionName'
+
 export default {
   name: 'Square',
   props: {
@@ -14,6 +16,9 @@ export default {
     red: Boolean,
     blue: Boolean,
     black: Boolean
+  },
+  components: {
+    SectionName
   }
 }
 </script>
@@ -22,6 +27,9 @@ export default {
   .square {
     height: 50vh;
     width: 50vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .yellow {
     background-color: #FFB627;
@@ -34,5 +42,8 @@ export default {
   }
   .black {
     background-color: #001514;
+  }
+  .section {
+    
   }
 </style>
