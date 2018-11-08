@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <Square/>
+    <Square v-bind:yellow='true'/>
   </div>
 </template>
 
