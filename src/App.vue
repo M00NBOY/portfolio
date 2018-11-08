@@ -1,6 +1,9 @@
 <template>
   <div id="app">
-    <Square v-bind:yellow='true'/>
+    <Square v-bind:yellow='true' section='About me'/>
+    <Square v-bind:red='true' section='Project'/>
+    <Square v-bind:blue='true' section='Contact'/>
+    <Square v-bind:black='true' section='?'/>
   </div>
 </template>
 
@@ -17,6 +20,7 @@ export default {
 
 <style>
 #app {
-
+  display: flex;
+  flex-wrap: wrap;
 }
 </style>

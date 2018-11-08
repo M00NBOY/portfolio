@@ -25,5 +25,6 @@ export default {
         font-size: 26px;
         color: #001514;
         font-weight: medium;
+        text-transform: uppercase;
     }
 </style>

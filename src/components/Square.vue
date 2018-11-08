@@ -2,7 +2,7 @@
   <div 
   class="square" 
   v-bind:class="{'yellow' : yellow, 'red' : red, 'blue' : blue, 'black' : black}">
-    <SectionName class="section" section='About me'/>
+    <SectionName class="section" :section="section"/>
   </div>
 </template>
 
@@ -15,7 +15,8 @@ export default {
     yellow: Boolean,
     red: Boolean,
     blue: Boolean,
-    black: Boolean
+    black: Boolean,
+    section: String
   },
   components: {
     SectionName
