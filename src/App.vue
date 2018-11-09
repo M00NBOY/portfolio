@@ -1,6 +1,7 @@
 <template>
   <div id="app">
-    <Square v-bind:yellow='true' section='About me'/>
+    <!-- <Square v-bind:yellow='true' section='About me'/> -->
+    <AboutMe />
     <Square v-bind:red='true' section='Project'/>
     <Square v-bind:blue='true' section='Contact'/>
     <Square v-bind:black='true' section='?'/>
@@ -8,12 +9,14 @@
 </template>
 
 <script>
-import Square from './components/Square.vue'
+import Square from './components/Square'
+import AboutMe from './components/AboutMe'
 
 export default {
   name: 'app',
   components: {
-    Square
+    Square,
+    AboutMe
   }
 }
 </script>
