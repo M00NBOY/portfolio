@@ -1,7 +1,8 @@
 <template>
   <div 
   class="square" 
-  v-bind:class="{'yellow' : yellow, 'red' : red, 'blue' : blue, 'black' : black}">
+  :class="color"
+  v-on:click='onClick(section)'>
     <SectionName class="section" :section="section"/>
   </div>
 </template>
@@ -12,12 +13,10 @@ import SectionName from './SectionName'
 export default {
   name: 'Square',
   props: {
-    yellow: Boolean,
-    red: Boolean,
-    blue: Boolean,
-    black: Boolean,
-    section: String
-  },
+    color: String,
+    section: String,
+    onClick: Function
+    },
   components: {
     SectionName
   }
