@@ -1,10 +1,10 @@
 <template>
   <div id="app">
-    <!-- <Square v-bind:yellow='true' section='About me'/> -->
-    <AboutMe />
-    <Square v-bind:red='true' section='Project'/>
-    <Square v-bind:blue='true' section='Contact'/>
-    <Square v-bind:black='true' section='?'/>
+    <Square color='yellow' section='About me' :onClick='handleSquare'/>
+    <!-- <AboutMe /> -->
+    <Square color='red' section='Project' :onClick='handleSquare'/>
+    <Square color='blue' section='Contact' :onClick='handleSquare'/>
+    <Square color='black' section='?' :onClick='handleSquare'/>
   </div>
 </template>
 
@@ -17,6 +17,12 @@ export default {
   components: {
     Square,
     AboutMe
+  },
+  methods: {
+    handleSquare : (param)=> {
+      console.log('salut')
+      console.log(param)
+    }
   }
 }
 </script>
